@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ProjectAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
@@ -25,3 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Lista_contatos_angular
+
+Uma lista de contatos como front de uma API e alguns outros testes dos meus estudos iniciais de angular
+>>>>>>> 139e9b6646f664f29c83c5ff45cb34b12fad7e00
