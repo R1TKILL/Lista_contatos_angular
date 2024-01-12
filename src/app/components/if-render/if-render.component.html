@@ -1,0 +1,10 @@
+<div class="divisor">
+    <div *ngIf="canShow">the conditional values is true!</div>
+    
+    <h2 *ngIf="name === 'Junior'; else nameNotFound">The name is Junior</h2>
+    <ng-template #nameNotFound>
+        <div>
+            <h2>The name not found!</h2>
+        </div>
+    </ng-template>
+</div>

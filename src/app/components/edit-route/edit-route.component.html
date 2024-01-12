@@ -1,0 +1,66 @@
+<div class="bottom">
+    <div class="divForm">
+        <form>
+
+            <div class="structAUX">
+                <p hidden="true" id="hiddenID">{{contact.id}}</p>
+                <div class="imageContainer">
+                    <img
+                        src="{{contact.perfil}}"
+                        alt="selecione uma imagem"
+                        id="imgPhoto"
+                        *ngIf="fileIMGB64 === ''; else userNewPerfil"
+                    />
+                    <ng-template #userNewPerfil>
+                        <img
+                            src="{{fileIMGB64}}"
+                            alt="selecione uma imagem"
+                            id="imgPhoto"
+                        />
+                    </ng-template>
+                </div>
+            </div>
+
+            <button id="btnPhoto" (click)="selectUpdateIMG()">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+
+            <input
+                class="fields"
+                type="file"
+                accept="image/*"
+                id="fileIMG"
+                name="fileIMG"
+            />
+
+            <div class="fieldsContainer">
+                <input
+                id="inputNome"
+                class="fields"
+                type="text"
+                name="name"
+                required="true"
+                value="{{contact.nome}}"
+                />
+                <label for="nome">Nome</label>
+
+                <input
+                    id="inputNumero"
+                    class="fields"
+                    type="text"
+                    name="numero"
+                    required="true"
+                    value="{{contact.numero}}"
+                    />
+                <label for="numero">Numero</label>
+            </div>
+
+            <button id="btnEdit" class="fieldButton" (click)="updateContact()">
+                Editar
+            </button>
+            <button id="btnDelete" class="fieldButton" (click)="deleteContact()">
+                Excluir
+            </button>
+        </form>
+    </div>
+</div>

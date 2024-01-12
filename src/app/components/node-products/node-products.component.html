@@ -1,0 +1,22 @@
+<nav class="top_Menu">
+    <h1 id="title" >Contacts list</h1>
+    <a routerLink="/create"><button id="btn-create">New Contact</button></a>
+</nav>
+
+<div *ngFor="let contact of contacts" class="divisor">
+    <a routerLink="/list/{{ contact.id }}" class="routeContacts">
+        <div class="contactsInfo">
+            <img class="photoPerfil" *ngIf="contact.perfil === ''; else imgPerfil" alt="img-user" src="assets/user.png" />
+            <ng-template #imgPerfil>
+                <img class="photoPerfil" alt="img-user" src="{{contact.perfil}}" />
+            </ng-template>
+
+            <h1 *ngIf="contact.nome === ''; else nomeIdentificador" class="identificador">
+                {{contact.numero}}
+            </h1>
+            <ng-template #nomeIdentificador>
+                <h1 class="identificador">{{contact.nome}}</h1>
+            </ng-template>
+        </div>
+    </a>
+</div>

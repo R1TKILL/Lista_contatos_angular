@@ -1,0 +1,9 @@
+<div class="divisor">
+    <h2>Two Way Binding</h2>
+    <form>
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Digite seu nome"/>
+        <input type="submit" value="Enviar"/>
+    </form>
+    <br>
+    <p>O nome é: {{ name | titlecase }}</p>
+</div>

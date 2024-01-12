@@ -1,0 +1,58 @@
+<div class="bottom">
+    <div class="divForm">
+        <form>
+
+            <div class="structAUX">
+                <div class="imageContainer">
+                    <img
+                        src="assets/user.png"
+                        alt="selecione uma imagem"
+                        id="imgPhoto"
+                        *ngIf="fileIMGB64 === ''; else userPerfil"
+                    />
+                    <ng-template #userPerfil>
+                        <img
+                            src="{{fileIMGB64}}"
+                            alt="selecione uma imagem"
+                            id="imgPhoto"
+                        />
+                    </ng-template>
+                </div>
+            </div>
+
+            <button id="btnPhoto" (click)="selectIMG()">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+
+            <input
+                class="fields"
+                type="file"
+                accept="image/*"
+                id="fileIMG"
+                name="fileIMG"
+            />
+
+            <div class="fieldsContainer">
+                <input
+                class="fields"
+                type="text"
+                [(ngModel)]="nome"
+                name="name"
+                required="true"
+                />
+                <label for="nome">Nome</label>
+
+                <input
+                    class="fields"
+                    type="text"
+                    [(ngModel)]="numero"
+                    name="numero"
+                    required="true"
+                />
+                <label for="numero">Numero</label>
+            </div>
+
+            <button class="fieldButton" (click)="createContact()">Salvar</button>
+        </form>
+    </div>
+</div>

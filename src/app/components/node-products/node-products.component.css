@@ -1,0 +1,41 @@
+.top_Menu{
+    padding: 4em;
+    background-color: #28773f;
+    text-align: center;
+}
+
+#title{
+    font-size: 45px;
+    padding: 2%;
+    color: #fff;
+}
+
+#btn-create{
+    font-size: 15px;
+    position: relative;
+    left: 40%;
+    border-radius: 15px;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.routeContacts{
+    text-decoration: none;
+    color: #000;
+}
+
+.photoPerfil{
+    border-radius: 80px;
+    width: 150px;  
+    height: 150px;
+}
+
+.contactsInfo{
+    display: flex;
+}
+
+.identificador{
+    position: relative;
+    left: 3%;
+    margin-top: 3%;
+}
